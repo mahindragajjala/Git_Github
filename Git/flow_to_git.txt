@@ -1,0 +1,33 @@
+1. Create / Clone Repository
+        
+2. Working Directory
+        
+3. git status
+        
+4. Modify files
+        
+5. git diff
+        
+6. git add
+        
+7. Staging Area
+        
+8. git diff --staged
+        
+9. git commit
+        
+10. Local Repository
+        
+11. git log
+        
+12. git branch
+        
+13. git merge / rebase
+        
+14. git push
+        
+15. Remote Repository (GitHub)
+        
+16. git fetch / git pull
+        
+17. Other developers' changes

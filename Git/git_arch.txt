@@ -1,0 +1,169 @@
+                    GIT ARCHITECTURE
+
+                         Developer
+                             │
+                             │ Git CLI commands
+                             ▼
+                    ┌─────────────────┐
+                    │    Git CLI      │
+                    │  git add        │
+                    │  git commit     │
+                    │  git branch     │
+                    │  git merge      │
+                    │  git push       │
+                    │  git pull       │
+                    └────────┬────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              │              │              │
+              ▼              ▼              ▼
+       Working Tree      Index/Staging   Local Repository
+       (your files)         Area           (.git/)
+              │              │              │
+              │              │              │
+              └──────────────┴──────────────┘
+                             │
+                             │ git push / fetch / pull
+                             ▼
+                    ┌─────────────────┐
+                    │ Remote Repository│
+                    │    GitHub        │
+                    │    GitLab        │
+                    │    Bitbucket     │
+                    └─────────────────┘
+
+
+
+
+The four most important concepts are:
+- Working Tree
+- Staging Area / Index
+- Local Repository
+- Remote Repository
+
+Working Tree
+- The working tree is the actual directory where you work in your project.
+- These are your actual files.
+- you are modifying the working tree.
+- git sees that something changed, but the change isn't committed yet.
+
+Staging Area/Index
+- The Staging Area is the place where you prepare changes for the next commit.
+
+Local Repository
+- This is one of the most important parts of git.
+- your local repository is primarily the: .git/ directory.
+
+Git Objects
+- Git internally stores your project history using objects.
+- the major object types are:
+ - Blob
+ - Tree
+ - commit
+ - Tag
+
+Explaination:
+
+1. First understand the big picture
+- when you run: git add . and git commit -m "Add login feature".
+- Git does not simply save a copy of your entire project as a folder.
+- Instead, Git stores your project as a collection of objects inside the .git/objects database.
+                    Commit
+                      │
+                      │ points to
+                      ▼
+                    Tree
+                 ┌────┼────┐
+                 │    │    │
+                 ▼    ▼    ▼
+               Blob  Blob  Tree
+                │     │      │
+                │     │      └── Blob
+                │     │
+                ▼     ▼
+             file contents
+
+Think of it like this:
+Blob = file contents
+Tree = directory/folder structure
+Commit = snapshot + history information
+Tag = human-readable name pointing to an object             
+
+Blob - stores file content
+- the frist object type is the blob.
+- Blob means: Binary Large Objects.
+- But for Git, the important idea is:
+A blob stores the contents of a file, not the filename or directory structure.
+for example - main.go - Git can create a blob representing those contents.
+Conceptually:
+                Blob A
+                │
+                └── "package main
+
+                    func main() {
+                        println("Hello")
+                    }"
+                Blob B
+                │
+                └── "# My Application"      
+                Blob C
+                │
+                └── "{ "port": 8080 }"              
+
+- Important: Blob does NOT know the filename.
+- This is extermely important.
+- suppose: hello.txt.
+- contains: hello world.
+- Git stores the content as a blob.
+- The blob itself doesn't fundamentally say:
+filename = hello.txt
+- Instead, the Tree records the relationship:
+- Tree - hello.txt - Blob
+- This separation is one of the important ideas behind Git's object model.
+
+
+Tree - represents directories
+- Now we come to the Tree object.
+- A tree represents the structure of a directory.
+Root Tree
+│
+├── README.md  ──────► Blob
+├── main.go    ──────► Blob
+├── config.json ─────► Blob
+│
+└── internal/ ───────► Tree
+                         │
+                         └── user/ ─────► Tree
+                                           │
+                                           └── user.go ───► Blob
+
+- Blob - stores file contents
+- Tree - stores directory structures/filename - object.
+- Tree is similar to a directory.
+
+
+Commit - connects everything together.
+
+- A commit represents a particular project state/snapshot and contains metadata describing that snapshot.
+- conceptually:
+                Commit
+                │
+                ├── author
+                ├── committer
+                ├── message
+                ├── parent
+                └── tree ─────────► Root Tree
+
+Ex:
+tree <root-tree-id>
+parent <previous-commit-id>
+author Mahindra <...>
+committer Mahindra <...>
+
+- Add user functionality
+- The exact stored representation has more detail, but this is the important structure.
+- Commit → Tree → Blob or Commit → Tree → Tree → Blob
+
+
+Project: How the code changes is capturing or detecting using the blob.
+
