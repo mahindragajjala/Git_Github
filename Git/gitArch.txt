@@ -34,7 +34,7 @@
 
 
 
-
+STAGES OF GIT ARCH
 The four most important concepts are:
 - Working Tree
 - Staging Area / Index
@@ -89,7 +89,7 @@ Tree = directory/folder structure
 Commit = snapshot + history information
 Tag = human-readable name pointing to an object             
 
-Blob - stores file content
+BLOB - stores file content
 - the frist object type is the blob.
 - Blob means: Binary Large Objects.
 - But for Git, the important idea is:
@@ -122,7 +122,7 @@ filename = hello.txt
 - This separation is one of the important ideas behind Git's object model.
 
 
-Tree - represents directories
+TREE - represents directories
 - Now we come to the Tree object.
 - A tree represents the structure of a directory.
 Root Tree
@@ -142,7 +142,7 @@ Root Tree
 - Tree is similar to a directory.
 
 
-Commit - connects everything together.
+COMMIT - connects everything together.
 
 - A commit represents a particular project state/snapshot and contains metadata describing that snapshot.
 - conceptually:
@@ -163,6 +163,30 @@ committer Mahindra <...>
 - Add user functionality
 - The exact stored representation has more detail, but this is the important structure.
 - Commit → Tree → Blob or Commit → Tree → Tree → Blob
+
+HEAD
+- "Where am I currently located in the commit history?"
+
+HEAD
+ │
+ ▼
+main
+ │
+ ▼
+Commit D
+
+A ── B ── C ── D
+              ▲
+              │
+            main
+              ▲
+              │
+             HEAD
+
+Branch
+- A git branch is essentially a movable pointer to a commit.
+git switch -c feature/login
+
 
 
 Project: How the code changes is capturing or detecting using the blob.
