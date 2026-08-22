@@ -183,9 +183,84 @@ A ── B ── C ── D
               │
              HEAD
 
-Branch
+BRANCH
 - A git branch is essentially a movable pointer to a commit.
 git switch -c feature/login
+
+LOCAL REPO - [PUTTING EVERYTHING TOGETHER]
+                  .git/
+                    │
+       ┌────────────┼────────────┐
+       │            │            │
+       ▼            ▼            ▼
+    Objects        Refs         HEAD
+       │            │
+       │            ├── heads/
+       │            │    ├── main
+       │            │    └── feature/login
+       │            │
+       │            └── remotes/
+       │                 └── origin/
+       │
+       ├── blobs
+       ├── trees
+       └── commits
+
+
+REMOTE REPO
+- Your local Git repository can communicate with a remote Git repository hosted on Github.
+
+Your Computer                         GitHub
+──────────────                        ──────
+
+Working Tree
+     │
+     ▼
+Staging Area
+     │
+     ▼
+Local Repository
+     │
+     │ git push
+     └──────────────────────────────► Remote Repository
+
+
+
+REMOTE ORIGIN
+- when you connect your local repository to github.
+- using the git remote add origin <repository-url>
+- Git creates a remote reference called: origin
+- you can see it using: git remote -v
+                Local Repository
+                    │
+                    │ origin
+                    ▼
+                GitHub Repository
+Local Git repository ↔ origin ↔ GitHub repository
+
+REMOTE-TRACKING BRANCHES
+- Git also maintains references to branches that exist on the remote.
+Local Repository
+
+branches/
+│
+├── main
+└── feature/login
+
+remotes/
+└── origin/
+    ├── main
+    └── feature/login
+
+- This distinction is very important - main - is your local branch.
+- origin/main - is your record of the remote branch.
+
+
+
+
+
+
+
 
 
 
