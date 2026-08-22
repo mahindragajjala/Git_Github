@@ -1,0 +1,168 @@
+Git Features.
+
+Core Features of Git
+
+- History
+        - Keeps a history of changes made to the project.
+        - You can see who changed what, when, and why.
+        - Main commands: git log, git show
+- Backup / Local Repository
+        - Stores the complete repository history locally.
+        - Your Git repository is not dependent on GitHub for basic Git operations.
+        - You can commit even without internet.
+- Ability to Go Backward
+        - You can return to an older version of your code.
+        - Useful when a new change breaks something.
+        - Commands: git restore, git reset, git revert, git switch
+- Ability to Compare Changes
+        - See exactly what changed between versions.
+        - Commands: git diff, git show
+- Multiple Developers Working Simultaneously
+        - Many developers can work on the same project.
+        - Git tracks everyone's changes.
+- Branches for Different Features
+        - Create separate branches for features, bug fixes, experiments, etc.
+        Example:
+        main
+        feature/login
+        feature/payment
+        bugfix/payment-error
+        Commands: git branch, git switch, git checkout
+- Merge Changes
+        - Combine changes from one branch into another.
+        Example:
+        - Developer works on feature/login
+        - Login is completed
+        - Merge it into main
+        - Command: git merge
+- Conflict Detection and Resolution
+        - Git identifies when two developers modify the same part of a file.
+        - Developers can manually decide which changes should remain.
+        - Commands: git merge, git rebase, git status
+- Staging Area
+        - Allows you to choose exactly which changes should go into the next commit.
+        - Commands: git add, git restore --staged
+- Commits
+        - A commit is a saved checkpoint of your project.
+        - Each commit has an ID/hash.
+        - Command: git commit
+
+Remote Collaboration Features
+- Remote Repository
+        - Connect your local repository to a remote repository such as GitHub.
+        - Command: git remote
+- Push
+        - Upload your local commits to a remote repository.
+        - Command: git push
+- Fetch
+        - Download information about remote changes without modifying your working files.
+        - Command: git fetch
+- Pull
+        - Get remote changes and integrate them into your current branch.
+        - Command: git pull
+- Clone
+        - Download an existing Git repository to your computer.
+        - Command: git clone
+- Distributed Version Control
+        - Every developer normally has a complete Git repository.
+        - There is no single machine that must contain the only copy of the history.
+
+Branch Management Features
+- Create Branches
+        - Create independent lines of development.
+        - git branch
+- Switch Branches
+        - Move between different development lines.
+        - git switch
+- Merge Branches
+        - Combine development work.
+        - git merge
+- Rebase
+        - Reapply commits on top of another branch.
+        - Useful for maintaining a cleaner project history.
+        - git rebase
+- Cherry-pick
+        - Take a specific commit from one branch and apply it to another.
+        - git cherry-pick
+- Tagging
+        - Give important commits meaningful names.
+        - Commonly used for releases.
+            Example:
+            v1.0.0
+            v2.0.0
+            git tag
+
+Inspection and Debugging Features
+- Check Current State
+        - See modified files, staged files, current branch, etc.
+        - git status
+- View Commit History
+        - git log
+-  Inspect a Commit
+        - git show
+- Find Who Changed a Line
+        - git blame
+- Find a Bug Using History
+        - git bisect
+        - Git can perform a binary search through commits to find where a bug was introduced.
+- Search Commit History
+        - Search commits by message, author, changes, etc.
+        - git log options
+
+
+Undo / Recovery Features
+- Undo Working-Directory Changes
+    - git restore
+- Unstage Changes
+    - git restore --staged
+- Undo a Public Commit Safely
+    - git revert
+- Move Branch Pointer Backward
+    - git reset
+- Recover Lost Commits
+    - git reflog
+    - Extremely useful when you accidentally reset or delete something.
+
+Advanced Features
+- Stash
+        - Temporarily save unfinished work.
+        - Useful when you need to switch branches without committing unfinished changes.
+        - git stash
+- Interactive Rebase
+        - Modify, reorder, combine, or clean up commits.
+        - git rebase -i
+- Squashing Commits
+        - Combine multiple commits into one.
+        - Useful before merging a feature.
+- Git Hooks
+        - Automatically execute scripts when Git events occur.
+        - Examples:
+        - before commit
+        - after commit
+        - before push
+- Submodules
+        - Include another Git repository inside your repository.
+        - git submodule
+- Worktrees
+        - Have multiple working directories connected to the same Git repository.
+        - Useful when working on multiple branches simultaneously.
+        - git worktree
+- Aliases
+        - Create shortcuts for frequently used commands.
+        - git config
+- Configuration
+        - Configure username, email, editor, aliases, behavior, etc.
+        - git config
+- .gitignore
+        - Tell Git which files/directories should not be tracked.
+            Example:
+            - build files
+            - .env
+            - logs
+            - IDE files
+            - temporary files
+- Git Attributes
+    - Control how Git treats particular files.
+    - .gitattributes
+- Large File Support
+    - Git LFS can be used for large binary files.    
