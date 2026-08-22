@@ -1,0 +1,6 @@
+Working Directory
+
+- The working directory is the actual project files you are currently working on.
+- it is the area where you edit, create, delete files.
+- when you modify main.go, the modification first exists in the working directory.
+- Git can detect the difference between your working file and the recorded git state.

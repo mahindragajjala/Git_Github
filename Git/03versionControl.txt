@@ -1,0 +1,28 @@
+Version Control
+
+- Version control means tracking changes to files over time.
+- Instead of having:
+                    project-final
+                    project-final-new
+                    project-final-new-2
+                    project-final-new-final
+                    project-final-final-real
+
+- Git maintains structured history
+- Each important state can be recorded as a commit.
+- You can compare versions.
+- You can identify who changed something.
+- You can identify when it changed.
+- You can restore previous versions.
+- Multiple developers can work on the same project.
+- Version control provides a controlled history rather than uncontrolled file copies.
+
+Version Control
+       │
+       ├── Track changes
+       ├── Store history
+       ├── Compare changes
+       ├── Restore old versions
+       ├── Identify authors
+       ├── Branch development
+       └── Merge development

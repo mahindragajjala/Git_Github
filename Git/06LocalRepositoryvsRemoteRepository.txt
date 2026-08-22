@@ -1,0 +1,20 @@
+Local Repository vs Remote Repository
+
+Local Repository
+    - Repository existing on your computer.
+    - Managed by Git.
+    - Contains Git history.
+    - Usually represented internally by the .git directory.
+    - You can create commits locally.
+    - You can create branches locally.
+    - You can inspect history locally.
+    - Does not require GitHub.
+
+Remote Repository
+    - Repository available on another machine/server.
+    - Usually used for collaboration and backup.
+    - Examples of hosting platforms:
+    - GitHub
+    - GitLab
+    - Bitbucket
+A remote repository has its own Git repository data.

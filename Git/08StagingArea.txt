@@ -1,0 +1,8 @@
+Staging Area
+- The Staging area is the preparation area for the next commit.
+- It allows you to select exactly which changes should go into a commit.
+- it sits between the working directory and repository.
+- for example main.go - modified 
+- you may want the next commit to contain only: main.go - so you stage only that change.
+
+Staging are = "What exactly do I want in my next commit?"

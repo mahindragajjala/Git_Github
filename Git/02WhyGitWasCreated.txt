@@ -1,0 +1,19 @@
+- Before Git, developers used systems such as BitKeeper, CVS, SVN, etc.
+- Many older systems were centralized.
+- Developers depended heavily on a central server.
+- Linux kernel development needed:
+                - Very high performance.
+                - Large-scale collaboration.
+                - Strong history tracking.
+                - Distributed development.
+                - Reliable branching and merging.
+- Git was created by Linus Torvalds in 2005 for Linux kernel development.
+- Git was designed to be:
+                            - Distributed.
+                            - Fast.
+                            - Reliable.
+                            - Scalable.
+                            - Suitable for large projects.
+                            - Strong at branching and merging.
+- The fundamental idea is:
+- Every developer can have a complete copy of the repository and its history.

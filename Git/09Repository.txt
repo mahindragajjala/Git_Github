@@ -1,0 +1,13 @@
+Repository
+
+- A Git repository is the place where Git maintains project history and metadata.
+- A repository normally contains a .git directory.
+- .git contains important Git information such as:
+                - Objects.
+                - References.
+                - HEAD information.
+                - Configuration.
+                - Repository metadata.
+- The repository records commits and their relationships.
+- A repository can exist locally.
+- A repository can also exist remotely.

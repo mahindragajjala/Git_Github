@@ -1,0 +1,11 @@
+What is Git?
+- Git is a distributed version control system (DVCS).
+- It tracks changes made to files over time.
+- It maintains the history of a project.
+- It allows you to see what changed, when, and by whom.
+- It allows you to move back to an earlier version of the project.
+- Every Git repository contains its own complete history.
+- Git primarily works through a CLI command system.
+- Git manages source code, configuration files, documentation, scripts, etc.
+- Git does not require GitHub to work.
+- Git can be used completely locally.

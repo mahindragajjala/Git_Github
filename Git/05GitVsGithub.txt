@@ -1,0 +1,20 @@
+Git
+- Software/tool.
+- Installed on your machine.
+- Provides Git commands.
+- Manages repositories.
+- Tracks history.
+- Creates commits.
+- Creates branches.
+- Performs merges.
+- Can work without internet.
+
+GitHub
+- Online platform/service.
+- Hosts Git repositories remotely.
+- Provides collaboration features.
+- Provides pull requests.
+- Provides issue tracking.
+- Provides code review.
+- Provides permissions.
+- Provides CI/CD integrations and other development features.

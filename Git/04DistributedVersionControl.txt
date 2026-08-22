@@ -1,0 +1,24 @@
+Distributed Version Control
+- Git is a Distributed Version Control System.
+- "Distributed Version Control System" means the repository is not dependent on only one central copy.
+- A developer's local repository contains:
+        - Project file's.
+        - Git metadata.
+        - Commit history.
+        - Branch information.
+        - References.
+- Multiple developers can each have their own repository.
+
+
+                 Remote Repository
+                       │
+          ┌────────────┼────────────┐
+          ↓            ↓            ↓
+      Developer A  Developer B  Developer C
+       Repository   Repository   Repository
+
+- Each developer can perform many git operations locally.
+- Creating commits does not require a remote server.
+- Creating branches does not require a remote server.
+- viewing history does not require a remote server.
+- Comparing local version does not require a remote server.
