@@ -1,0 +1,13 @@
+Commit 
+
+- A commit represents a recorded snapshot/state of the project.
+- A commit is created from the staged changes.
+- A commit has a unique identifier called a commit hash.
+- A commmit contains information such as:
+                            Author.
+                            Committer.
+                            Message.
+                            Timestamp.
+                            Parent commit(s).
+                            Snapshot/tree information.
+- commit form a history.

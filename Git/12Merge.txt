@@ -1,0 +1,11 @@
+Merge 
+- Merge combines the histories of different branches.
+- It is normally used after independent development.
+- Git determines how the histories can be combined.
+- if the same part of a file was changed differently, a merge conflict can occur.
+- the developer must resolve the conflict.
+
+suppose there is a project - Payment Service - main
+Two Developers are working - Dev1 - Login feature, Dev2 - Payment feature
+They should not directly work on main.
+ 

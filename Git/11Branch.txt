@@ -1,0 +1,11 @@
+Branch
+- A Branch is movable reference to a commit.
+- Branches allow independent lines of development.
+- A branch does not mean a separate copy of every file.
+- Mutiple branches can point  to different commits.
+- Branches are commonly used for:
+                                Features.
+                                Bug fixes.
+                                Experiments.
+                                Releases.
+                                Development work. 
